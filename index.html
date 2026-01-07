@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #050505; color: #d1d5db; }
+        body { font-family: 'Inter', sans-serif; background-color: #050505; color: #d1d5db; overflow-x: hidden; }
 
         /* Branding: White Sheen Effect */
         .catalyst-sheen {
@@ -17,11 +17,11 @@
             font-weight: 800;
             letter-spacing: 0.3em;
             text-transform: uppercase;
-            background: linear-gradient(90deg, #333 0%, #fff 50%, #333 100%);
+            background: linear-gradient(90deg, #222 0%, #fff 50%, #222 100%);
             background-size: 200% auto;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: shine 4s linear infinite;
+            animation: shine 5s linear infinite;
         }
         @keyframes shine { to { background-position: 200% center; } }
 
@@ -36,11 +36,11 @@
             justify-content: center;
         }
         .cc-inner {
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: 900;
             color: white;
             z-index: 20;
-            text-shadow: 0 0 15px rgba(37, 99, 235, 0.5);
+            text-shadow: 0 0 20px rgba(37, 99, 235, 0.6);
         }
         .diamond {
             position: absolute;
@@ -48,126 +48,131 @@
             height: 12px;
             background: #2563eb;
             transform: rotate(45deg);
-            box-shadow: 0 0 10px #2563eb;
+            box-shadow: 0 0 15px #2563eb;
         }
-        .d1 { animation: orbit 3s linear infinite; }
-        .d2 { animation: orbit 3s linear infinite -1s; }
-        .d3 { animation: orbit 3s linear infinite -2s; }
+        .d1 { animation: orbit 3.5s linear infinite; }
+        .d2 { animation: orbit 3.5s linear infinite -1.16s; }
+        .d3 { animation: orbit 3.5s linear infinite -2.32s; }
 
         @keyframes orbit {
-            from { transform: rotate(0deg) translateX(55px) rotate(-45deg); }
-            to { transform: rotate(360deg) translateX(55px) rotate(-45deg); }
+            from { transform: rotate(0deg) translateX(65px) rotate(-45deg); }
+            to { transform: rotate(360deg) translateX(65px) rotate(-45deg); }
         }
 
         .glass {
             background: rgba(255, 255, 255, 0.02);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .glass:hover { border-color: rgba(37, 99, 235, 0.4); background: rgba(255, 255, 255, 0.04); }
+        .glass:hover { 
+            border-color: rgba(37, 99, 235, 0.5); 
+            background: rgba(255, 255, 255, 0.05); 
+            transform: translateY(-8px); 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
     </style>
 </head>
 <body>
 
-    <header class="pt-20 pb-12 text-center">
+    <header class="pt-24 pb-12 text-center">
         <div class="logo-box">
             <div class="cc-inner">CC</div>
             <div class="diamond d1"></div>
             <div class="diamond d2"></div>
             <div class="diamond d3"></div>
         </div>
-        <h1 class="text-6xl font-black text-white mt-6 tracking-tighter uppercase">Onyx Offensive</h1>
+        <h1 class="text-6xl font-black text-white mt-8 tracking-tighter uppercase">Onyx Offensive</h1>
         <div class="catalyst-sheen text-2xl mt-4">COBOL Catalyst</div>
     </header>
 
     <main class="max-w-7xl mx-auto px-6">
         
-        <section class="text-center mb-24">
-            <h2 class="text-white text-xl font-light tracking-widest uppercase mb-4">Legacy Defense Division</h2>
-            <p class="text-gray-500 max-w-2xl mx-auto text-lg">
-                Financial institutions move $3T daily on code written in the 1970s. <br>
-                Onyx Offensive identifies the architectural failures before they become systemic breaches.
+        <section class="text-center mb-28">
+            <h2 class="text-blue-500 text-[10px] font-black tracking-[0.6em] uppercase mb-6">Legacy Defense Division</h2>
+            <p class="text-gray-400 max-w-3xl mx-auto text-xl font-light leading-relaxed">
+                Modern banking survives on 50-year-old logic. <br>
+                <span class="text-white font-bold">Onyx Offensive</span> proactively weaponizes architectural defense to prevent systemic failure.
             </p>
         </section>
 
-        <div class="grid lg:grid-cols-3 gap-8 mb-32">
+        <div class="grid lg:grid-cols-3 gap-10 mb-32 items-stretch">
             <div class="glass rounded-3xl p-10 flex flex-col">
-                <h3 class="text-blue-500 font-bold tracking-widest uppercase text-sm mb-2">Tactical Audit</h3>
-                <div class="text-5xl font-extrabold text-white mb-6">$25,000</div>
-                <ul class="space-y-4 mb-10 text-sm flex-grow">
-                    <li class="flex items-center">✓ 50k Lines of Code Deep Scan</li>
-                    <li class="flex items-center">✓ C-Suite Vulnerability Briefing</li>
-                    <li class="flex items-center">✓ Regulatory Compliance Mapping</li>
-                    <li class="flex items-center">✓ 30-Day Remediation Window</li>
+                <h3 class="text-gray-500 font-bold tracking-widest uppercase text-[10px] mb-3">Tactical Audit</h3>
+                <div class="text-5xl font-black text-white mb-6">$25,000</div>
+                <ul class="space-y-4 mb-10 text-sm flex-grow text-gray-400">
+                    <li class="flex items-start"><span class="text-blue-500 mr-3">✓</span> 50k Lines of Code Forensic Scan</li>
+                    <li class="flex items-start"><span class="text-blue-500 mr-3">✓</span> C-Suite Exposure Briefing</li>
+                    <li class="flex items-start"><span class="text-blue-500 mr-3">✓</span> Regulatory Compliance Delta</li>
+                    <li class="flex items-start"><span class="text-blue-500 mr-3">✓</span> 30-Day Technical Remediation</li>
                 </ul>
-                <a href="https://calendly.com/onyx-offensive/starter" class="w-full py-4 bg-white text-black font-black text-center rounded-xl hover:invert transition">Request Audit</a>
+                <a href="https://cal.com/onyx.offensive/cobol-starter-one-time-assessment?overlayCalendar=true" target="_blank" class="w-full py-4 bg-white text-black font-black text-sm text-center rounded-xl hover:bg-gray-200 transition">Request Audit</a>
             </div>
 
-            <div class="glass rounded-3xl p-10 flex flex-col border-blue-600 border-2 relative scale-105 shadow-2xl shadow-blue-900/20">
-                <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-6 py-1 rounded-full text-[10px] font-black uppercase">Standard Deployment</div>
-                <h3 class="text-blue-400 font-bold tracking-widest uppercase text-sm mb-2">Continuous Shield</h3>
-                <div class="text-5xl font-extrabold text-white mb-6">$150,000<span class="text-lg text-gray-500">/yr</span></div>
+            <div class="glass rounded-3xl p-10 flex flex-col border-blue-600 border-2 relative scale-105 shadow-2xl shadow-blue-900/30">
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-8 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg">Professional Standard</div>
+                <h3 class="text-blue-400 font-bold tracking-widest uppercase text-[10px] mb-3">Continuous Shield (CTEM)</h3>
+                <div class="text-5xl font-black text-white mb-6">$150,000<span class="text-lg text-gray-500">/yr</span></div>
                 <ul class="space-y-4 mb-10 text-sm flex-grow">
-                    <li class="flex items-center">✓ 250k LoC Automated Surveillance</li>
-                    <li class="flex items-center">✓ Mainframe CI/CD Security Hooks</li>
-                    <li class="flex items-center">✓ PCI-DSS & SOX Auto-Reporting</li>
-                    <li class="flex items-center">✓ 24hr Critical Response SLA</li>
+                    <li class="flex items-start"><span class="text-blue-500 mr-3">✓</span> 250k LoC Automated Surveillance</li>
+                    <li class="flex items-start"><span class="text-blue-500 mr-3">✓</span> CI/CD Legacy Integration Hooks</li>
+                    <li class="flex items-start"><span class="text-blue-500 mr-3">✓</span> SOX & PCI-DSS Auto-Reporting</li>
+                    <li class="flex items-start"><span class="text-blue-500 mr-3">✓</span> 24hr Critical Incident Response</li>
                 </ul>
-                <a href="https://calendly.com/onyx-offensive/pro" class="w-full py-4 bg-blue-600 text-white font-black text-center rounded-xl hover:bg-blue-700 transition">Establish Shield</a>
+                <a href="https://cal.com/onyx.offensive/continuous-threat-management-ctem-consultation?overlayCalendar=true" target="_blank" class="w-full py-4 bg-blue-600 text-white font-black text-sm text-center rounded-xl hover:bg-blue-700 transition shadow-xl shadow-blue-900/40">Establish Shield</a>
             </div>
 
             <div class="glass rounded-3xl p-10 flex flex-col">
-                <h3 class="text-purple-500 font-bold tracking-widest uppercase text-sm mb-2">Red Team Sovereignty</h3>
-                <div class="text-5xl font-extrabold text-white mb-6">$500,000<span class="text-lg text-gray-500">/yr</span></div>
-                <ul class="space-y-4 mb-10 text-sm flex-grow">
-                    <li class="flex items-center">✓ Unlimited Global LoC Coverage</li>
-                    <li class="flex items-center">✓ Dedicated Embedded Engineer</li>
-                    <li class="flex items-center">✓ Custom Logic Patch Engineering</li>
-                    <li class="flex items-center">✓ 24/7 Offensive Monitoring</li>
+                <h3 class="text-purple-500 font-bold tracking-widest uppercase text-[10px] mb-3">Sovereign Security</h3>
+                <div class="text-5xl font-black text-white mb-6">$500,000<span class="text-lg text-gray-500">/yr</span></div>
+                <ul class="space-y-4 mb-10 text-sm flex-grow text-gray-400">
+                    <li class="flex items-start"><span class="text-purple-500 mr-3">✓</span> Unlimited Global Infrastructure</li>
+                    <li class="flex items-start"><span class="text-purple-500 mr-3">✓</span> Embedded Legacy Security Lead</li>
+                    <li class="flex items-start"><span class="text-purple-500 mr-3">✓</span> Logic-Flow Patch Engineering</li>
+                    <li class="flex items-start"><span class="text-purple-500 mr-3">✓</span> 24/7 Red-Team Surveillance</li>
                 </ul>
-                <a href="https://calendly.com/onyx-offensive/enterprise" class="w-full py-4 border border-white/20 text-white font-black text-center rounded-xl hover:bg-white/5 transition">Executive Access</a>
+                <a href="https://cal.com/onyx.offensive/cobol-enterprise-cobol-complete-security-platform?overlayCalendar=true" target="_blank" class="w-full py-4 border border-white/20 text-white font-black text-sm text-center rounded-xl hover:bg-white/5 transition">Executive Access</a>
             </div>
         </div>
 
-        <section id="scanner" class="glass rounded-[3rem] p-16 mb-32">
-            <div class="flex flex-col lg:flex-row gap-16">
+        <section id="scanner" class="glass rounded-[4rem] p-16 mb-40 border-white/5 shadow-inner">
+            <div class="flex flex-col lg:flex-row gap-20">
                 <div class="lg:w-1/2">
-                    <h2 class="text-4xl font-bold text-white mb-6">Offensive Analysis Preview</h2>
-                    <p class="text-gray-400 mb-8 italic">Ingest legacy COBOL to identify high-value target vectors.</p>
+                    <h2 class="text-4xl font-black text-white mb-6 tracking-tight">Threat Ingestion</h2>
+                    <p class="text-gray-400 mb-10 italic text-sm border-l-2 border-blue-600 pl-4">Simulate adversarial targeting on legacy logic blocks.</p>
                     
-                    <select id="sampleSelect" onchange="loadSample()" class="w-full bg-black border border-white/10 rounded-xl p-4 text-white mb-6 focus:border-blue-500 outline-none">
-                        <option value="bank-transfer">Vulnerability: SQL Injection Vector</option>
-                        <option value="atm">Vulnerability: Logic Bypass / Hardcoded Key</option>
-                        <option value="secure">Validated: Secure Parameterized Logic</option>
+                    <select id="sampleSelect" onchange="loadSample()" class="w-full bg-black border border-white/10 rounded-xl p-4 text-white mb-6 focus:border-blue-500 outline-none cursor-pointer text-xs font-bold uppercase tracking-widest">
+                        <option value="bank-transfer">Case: SQL Injection Vulnerability</option>
+                        <option value="atm">Case: Logic Bypass / Hardcoded Key</option>
+                        <option value="secure">Case: Parameterized Prepared Logic</option>
                     </select>
                     
-                    <textarea id="cobolCode" spellcheck="false" class="w-full h-96 bg-black/80 font-mono text-xs p-8 rounded-2xl border border-white/5 text-blue-400 focus:border-blue-600 outline-none transition"></textarea>
+                    <textarea id="cobolCode" spellcheck="false" class="w-full h-96 bg-black/80 font-mono text-[11px] p-8 rounded-2xl border border-white/5 text-blue-400 focus:border-blue-600 outline-none transition shadow-inner"></textarea>
                     
-                    <button onclick="runScan()" class="mt-8 w-full py-5 bg-white text-black font-black rounded-xl hover:bg-blue-600 hover:text-white transition uppercase tracking-widest">
-                        Run Threat Assessment
+                    <button onclick="runScan()" class="mt-8 w-full py-5 bg-white text-black font-black rounded-xl hover:bg-blue-600 hover:text-white transition uppercase tracking-[0.3em] text-xs">
+                        Initiate Assessment
                     </button>
                 </div>
 
-                <div class="lg:w-1/2 flex flex-col justify-center">
-                    <div id="placeholder" class="text-center opacity-30">
-                        <div class="text-6xl mb-4">⬢</div>
-                        <p class="uppercase tracking-widest text-xs">Waiting for Code Input</p>
+                <div class="lg:w-1/2 flex flex-col justify-center min-h-[450px]">
+                    <div id="placeholder" class="text-center opacity-20">
+                        <div class="text-7xl mb-6">⬢</div>
+                        <p class="uppercase tracking-[0.5em] text-[9px]">Awaiting Core Input...</p>
                     </div>
-                    <div id="results" class="hidden animate-in fade-in duration-700">
+                    <div id="results" class="hidden">
                         </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="py-20 border-t border-white/5 text-center">
-        <div class="logo-box scale-50 opacity-20 mb-4">
+    <footer class="py-24 border-t border-white/5 text-center">
+        <div class="logo-box scale-50 opacity-10 mb-8">
             <div class="cc-inner">CC</div>
             <div class="diamond d1"></div><div class="diamond d2"></div><div class="diamond d3"></div>
         </div>
-        <div class="catalyst-sheen text-sm opacity-60 mb-6">COBOL Catalyst</div>
-        <p class="text-[10px] text-gray-700 uppercase tracking-[0.5em]">Onyx Offensive © 2026 | Legacy Defense Division</p>
+        <div class="catalyst-sheen text-xs opacity-50 mb-8">COBOL Catalyst</div>
+        <p class="text-[8px] text-gray-800 uppercase tracking-[0.8em]">Onyx Offensive © 2026 | Legacy Sovereign Systems</p>
     </footer>
 
     <script>
@@ -194,32 +199,36 @@
             res.classList.remove('hidden');
 
             let v = [];
-            if(code.includes("SQL-QUERY")) v.push({t: "Critical: SQL Injection", d: "Dynamic string concatenation in SQL detected."});
-            if(code.includes("PII-SSN")) v.push({t: "High: PII Leak", d: "Unmasked Social Security data sent to standard output."});
-            if(code.includes("AUTH-KEY")) v.push({t: "Critical: Hardcoded Auth", d: "Administrator master-key found in source storage."});
-            if(code.includes("ftp://")) v.push({t: "Medium: Cleartext Protocol", d: "Insecure FTP endpoint detected in communications."});
+            if(code.includes("SQL-QUERY")) v.push({t: "Critical: SQL Injection Vector", d: "Direct concatenation of console input into dynamic SQL detected."});
+            if(code.includes("PII-SSN")) v.push({t: "High: Data Leakage (PII)", d: "Unmasked Social Security data being routed to standard output logs."});
+            if(code.includes("AUTH-KEY")) v.push({t: "Critical: Hardcoded Master Key", d: "Static administrative bypass credentials found in WORKING-STORAGE."});
+            if(code.includes("ftp://")) v.push({t: "Medium: Cleartext Comm Protocol", d: "Insecure FTP routine detected. Use of TLS/SFTP is mandated."});
 
             if(v.length === 0) {
-                res.innerHTML = `<div class="p-10 border border-blue-500 bg-blue-500/5 rounded-3xl text-center">
-                    <h3 class="text-blue-400 text-2xl font-bold mb-4">Logic Validated</h3>
-                    <p class="text-sm text-gray-400">No offensive vectors identified in this code segment.</p>
+                res.innerHTML = `<div class="p-10 border border-blue-600 bg-blue-600/5 rounded-[2rem] text-center">
+                    <h3 class="text-blue-400 text-2xl font-black mb-4 uppercase tracking-tighter">Logic Secure</h3>
+                    <p class="text-[10px] text-gray-500 uppercase tracking-widest leading-loose">No exploitable patterns found in this code mirror segment.</p>
                 </div>`;
             } else {
                 res.innerHTML = `
-                    <h3 class="text-white text-3xl font-black mb-8">THREAT REPORT: ${v.length} Vectors</h3>
-                    <div class="space-y-4 mb-8">
-                        ${v.map(i => `
-                            <div class="p-6 bg-red-950/20 border-l-4 border-red-600">
-                                <div class="text-red-500 font-bold uppercase text-xs mb-1">${i.t}</div>
-                                <div class="text-white text-sm">${i.d}</div>
-                            </div>
-                        `).join('')}
-                    </div>
-                    <div class="p-8 bg-white/5 rounded-2xl border border-white/10">
-                        <div class="text-xs uppercase tracking-widest text-gray-500 mb-2">Estimated Regulatory Exposure</div>
-                        <div class="text-4xl font-bold text-white mb-4">$1.25M - $4.8M</div>
-                        <p class="text-[10px] text-gray-600 mb-6">Based on standard PCI-DSS and GDPR penalty frameworks for banking infrastructure failures.</p>
-                        <button class="w-full py-3 bg-white text-black text-xs font-black uppercase tracking-widest">Get Full Forensic PDF</button>
+                    <div class="space-y-6">
+                        <div class="flex items-center justify-between border-b border-white/10 pb-6">
+                            <h3 class="text-white text-xl font-black uppercase tracking-tight">Vulnerability Report</h3>
+                            <span class="text-red-600 font-mono text-xl font-black animate-pulse">${v.length} EXPOSURES</span>
+                        </div>
+                        <div class="space-y-4">
+                            ${v.map(i => `
+                                <div class="p-6 bg-red-950/10 border-l-2 border-red-600 transition hover:bg-red-950/20">
+                                    <div class="text-red-500 font-black uppercase text-[10px] mb-2 tracking-[0.2em]">${i.t}</div>
+                                    <div class="text-white/70 text-xs leading-relaxed font-light">${i.d}</div>
+                                </div>
+                            `).join('')}
+                        </div>
+                        <div class="mt-10 p-10 bg-white/[0.02] rounded-3xl border border-white/5">
+                            <div class="text-[10px] uppercase tracking-[0.4em] text-gray-500 mb-3">Regulatory Fine Risk</div>
+                            <div class="text-5xl font-black text-white mb-4">$1.2M+</div>
+                            <p class="text-[9px] text-gray-600 leading-normal uppercase font-bold tracking-widest">Calculated based on average OCC and GDPR enforcement frameworks.</p>
+                        </div>
                     </div>
                 `;
             }

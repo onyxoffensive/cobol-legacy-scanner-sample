@@ -44,3 +44,27 @@ Ready to harden your global infrastructure? Book a consultation with the Onyx Of
 🌎 Book via Cal.com: cal.com/onyx.offensive
 
 Proprietary Legacy Defense Systems © 2026 Onyx Offensive
+
+# ONYX OFFENSIVE PROPRIETARY LICENSE
+## Version 1.0 | COBOL Catalyst Division
+
+Copyright (c) 2026 Onyx Offensive. All rights reserved.
+
+### 1. PROPRIETARY NATURE
+This software and its associated logic patterns ("COBOL Catalyst") are the 
+exclusive intellectual property of Onyx Offensive. This repository serves 
+as a Proof of Concept (PoC) for enterprise-grade legacy defense.
+
+### 2. USAGE RESTRICTIONS
+Commercial use, redistribution, or modification of this scanner for 
+third-party audits is strictly prohibited without a signed 
+Sovereign Security Agreement.
+
+### 3. LIABILITY LIMITATION
+This tool is provided for simulated threat ingestion only. Systemic 
+vulnerabilities identified by this engine require professional 
+remediation by Onyx Offensive engineers to ensure global financial stability.
+
+### 4. INQUIRIES
+For licensing or enterprise implementation:
+https://cal.com/onyx.offensive
